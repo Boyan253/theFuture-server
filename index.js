@@ -22,7 +22,13 @@ async function start() {
 
     //New imports
 
-    app.use(cors())
+    const cors = require("cors");
+const corsOptions = {
+  // origin: 'https://metnime.vercel.app',
+  origin: '*',
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+}
 
     app.use(bodyParser.json())
 
