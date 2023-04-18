@@ -13,7 +13,13 @@ module.exports = (app) => {
     app.engine('.hbs', handlebars({
         extname: '.hbs'
     }).engine)
-    app.use(cors())
+   const cors = require("cors");
+const corsOptions = {
+  // origin: 'https://metnime.vercel.app',
+  origin: '*',
+  credentials: true,            //access-control-allow-credentials:true
+  optionSuccessStatus: 200,
+}
     app.set('view engine', '.hbs')
     app.use('/static', express.static('static'))
     app.use(session({
