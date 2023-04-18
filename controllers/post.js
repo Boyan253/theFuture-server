@@ -89,6 +89,8 @@ router.get("/posts", async (req, res) => {
         let posts = await Post.find({}).sort({ createdAt: 'desc' })
 
         res.status(200).json({ posts });
+        res.header("Access-Control-Allow-Origin", "*"); // allow all origins
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     } catch (error) {
         if (error.kind === 'ObjectId') {
             return res.status(200).json({ posts: [], count: 0 });
