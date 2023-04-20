@@ -20,7 +20,7 @@ const corsOptions = {
   credentials: true,            //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 }
-app.use(corsOptions);
+app.use(cors(corsOptions));
     app.set('view engine', '.hbs')
     app.use('/static', express.static('static'))
     app.use(session({
