@@ -24,11 +24,12 @@ async function start() {
 
     const cors = require("cors");
 const corsOptions = {
-  // origin: 'https://metnime.vercel.app',
-  origin: '*',
-  credentials: true,            //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
+  origin: "https://react-project-defense-mrhf-kmdul1uh5-boyan253.vercel.app",
+  credentials: true,
+  optionsSuccessStatus: 200
 }
+
+app.use(cors(corsOptions));
 
     app.use(bodyParser.json())
 
