@@ -56,7 +56,7 @@ const corsOptions = {
 
     const socketIO = require('socket.io')(http, {
         cors: {
-            origin: "https://react-project-defense-mrhf.vercel.app"
+            origin: "*"
         }
     });
 
