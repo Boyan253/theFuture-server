@@ -24,7 +24,7 @@ async function start() {
 
     const cors = require("cors");
 const corsOptions = {
-  origin: "https://react-project-defense-mrhf-kmdul1uh5-boyan253.vercel.app",
+  origin: "https://future-server.onrender.com",
   credentials: true,
   optionsSuccessStatus: 200
 }
